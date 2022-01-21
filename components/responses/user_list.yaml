@@ -1,0 +1,13 @@
+description: OK
+content:
+  application/json:
+    schema:
+      type: object
+      title: ResponseUser
+      properties:
+        user:
+          type: array
+          items:
+            $ref: '../schemas/entity/user.yaml'
+      required:
+        - user

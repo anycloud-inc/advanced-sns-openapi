@@ -1,0 +1,14 @@
+# /friend_requests
+get:
+  security:
+    - Bearer: []
+  tags: [friend_request]
+  operationId: listReceivingFriendRequests
+  parameters:
+    - in: query
+      name: pagination
+      schema:
+        $ref: '../../openapi.yaml#/components/schemas/RequestPagination'
+  responses:
+    '200':
+      $ref: '../../openapi.yaml#/components/responses/ResponseFriendRequestList'

@@ -1,0 +1,23 @@
+# /post_seen_logs
+post:
+  security:
+    - Bearer: []
+  tags: [post_seen_log]
+  requestBody:
+    content:
+      application/json:
+        schema:
+          title: RequestCreatePostSeenLog
+          type: object
+          properties:
+            postIds:
+              type: array
+              items:
+                type: integer
+          required:
+            - postIds
+
+  responses:
+    '200':
+      $ref: '../../openapi.yaml#/components/responses/ResponsePostSeenLogList'
+  operationId: createPostSeenLog

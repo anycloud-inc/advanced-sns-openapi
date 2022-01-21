@@ -1,0 +1,21 @@
+# /friend_requests/status
+patch:
+  security:
+    - Bearer: []
+  tags: [friend_request]
+  operationId: updateFriendRequestStatus
+  requestBody:
+    content:
+      application/json:
+        schema:
+          title: RequestUpdateFriendRequestStatus
+          type: object
+          required: [senderId, status]
+          properties:
+            senderId:
+              type: integer
+            status:
+              $ref: '../../components/schemas/enum/friend_request_status.yaml'
+  responses:
+    200:
+      $ref: '../../openapi.yaml#/components/responses/ResponseSuccess'

@@ -1,0 +1,37 @@
+type: object
+description: ''
+title: ''
+properties:
+  id:
+    type: integer
+  content:
+    type: string
+  userId:
+    type: integer
+  createdAt:
+    type: string
+    format: date-time
+  user:
+    $ref: 'user.yaml'
+  viewables:
+    description: 閲覧可能者。自分の投稿でのみ取得可能。
+    type: array
+    items:
+      $ref: 'post_viewable.yaml'
+  seenLogs:
+    description: 既読情報。自分の投稿でのみ取得可能。
+    type: array
+    items:
+      $ref: 'post_seen_log.yaml'
+  messages:
+    description: 投稿についたDM、リアクション一覧。自分の投稿でのみ取得可能。
+    type: array
+    items:
+      $ref: 'message.yaml'
+
+
+required:
+  - id
+  - body
+  - userId
+  - createdAt

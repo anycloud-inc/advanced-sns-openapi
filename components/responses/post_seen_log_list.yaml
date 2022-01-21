@@ -1,0 +1,13 @@
+description: OK
+content:
+  application/json:
+    schema:
+      title: ResponsePostSeenLogList
+      type: object
+      properties:
+        postSeenLogs:
+          type: array
+          items:
+            $ref: '../schemas/entity/post_seen_log.yaml'
+      required:
+        - postSeenLogs

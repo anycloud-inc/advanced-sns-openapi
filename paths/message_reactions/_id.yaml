@@ -1,0 +1,13 @@
+# /message_reactions/{id}
+parameters:
+  - schema:
+      type: number
+    name: id
+    in: path
+    required: true
+delete:
+  tags: [message_reaction]
+  operationId: deleteMessageReaction
+  responses:
+    '200':
+      $ref: '../../openapi.yaml#/components/responses/ResponseSuccess'

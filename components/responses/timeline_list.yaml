@@ -1,0 +1,13 @@
+description: OK
+content:
+  application/json:
+    schema:
+      title: ResponseTimelineList
+      type: object
+      properties:
+        timelines:
+          type: array
+          items:
+            $ref: '../schemas/entity/timeline.yaml'
+      required:
+        - timelines

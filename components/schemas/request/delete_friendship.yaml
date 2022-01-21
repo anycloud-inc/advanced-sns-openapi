@@ -1,0 +1,7 @@
+type: object
+title: RequestDeleteFriendship
+properties:
+  friendId:
+    type: integer
+required:
+  - friendId

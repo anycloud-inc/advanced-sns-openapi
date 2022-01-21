@@ -1,0 +1,11 @@
+type: object
+properties:
+  user:
+    $ref: 'user.yaml'
+  posts:
+    type: array
+    items:
+      $ref: 'post.yaml'
+required:
+  - user
+  - posts

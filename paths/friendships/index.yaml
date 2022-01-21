@@ -1,0 +1,23 @@
+# /friendships
+get:
+  security:
+    - Bearer: []
+  tags: [friendship]
+  operationId: listFriendships
+  description: ''
+  responses:
+    '200':
+      $ref: '../../openapi.yaml#/components/responses/ResponseFriendshipList'
+delete:
+  security:
+    - Bearer: []
+  tags: [friendship]
+  operationId: deleteFriendship
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/schemas/request/delete_friendship.yaml'
+  responses:
+    '200':
+      $ref: '../../openapi.yaml#/components/responses/ResponseSuccess'

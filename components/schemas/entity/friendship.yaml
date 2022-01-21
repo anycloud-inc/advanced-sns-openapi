@@ -1,0 +1,12 @@
+type: object
+properties:
+  id:
+    type: integer
+  friendId:
+    type: integer
+  friend:
+    $ref: 'user.yaml'
+
+required:
+  - id
+  - friendId

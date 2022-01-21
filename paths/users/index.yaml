@@ -1,0 +1,25 @@
+# /users
+get:
+  security:
+    - Bearer: []
+  tags: [user]
+  operationId: findUserList
+  parameters:
+    - in: query
+      name: pagination
+      schema:
+        $ref: '../../openapi.yaml#/components/schemas/RequestPagination'
+    - in: query
+      name: filter
+      required: true
+      schema:
+        title: RequestUserFilter
+        type: object
+        properties:
+          uuid:
+            type: string
+
+  description: ''
+  responses:
+    '200':
+      $ref: '../../openapi.yaml#/components/responses/ResponseUserList'

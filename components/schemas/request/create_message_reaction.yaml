@@ -1,0 +1,10 @@
+title: RequestCreateMessageReaction
+type: object
+properties:
+  messageId:
+    type: integer
+  content:
+    type: string
+required:
+  - messageId
+  - content

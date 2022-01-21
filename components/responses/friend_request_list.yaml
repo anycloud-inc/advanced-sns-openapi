@@ -1,0 +1,14 @@
+description: OK
+content:
+  application/json:
+    schema:
+      title: ResponseFriendRequestList
+      type: object
+      required: [friendRequests, totalCount]
+      properties:
+        friendRequests:
+          type: array
+          items:
+            $ref: '../schemas/entity/friend_request.yaml'
+        totalCount:
+          type: integer

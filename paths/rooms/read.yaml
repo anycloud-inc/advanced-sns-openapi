@@ -1,0 +1,15 @@
+# /rooms/{id}/read
+parameters:
+  - schema:
+      type: string
+    name: id
+    in: path
+    required: true
+patch:
+  security:
+    - Bearer: []
+  tags: [room]
+  responses:
+    '200':
+      $ref: '../../openapi.yaml#/components/responses/ResponseRoom'
+  operationId: updateReadAt

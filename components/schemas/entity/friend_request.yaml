@@ -1,0 +1,16 @@
+type: object
+required: [id, senderId, receiverId, createdAt]
+properties:
+  id:
+    type: integer
+  senderId:
+    type: integer
+  receiverId:
+    type: integer
+  createdAt:
+    type: string
+    format: date-time
+  sender:
+    $ref: 'user.yaml'
+  receiver:
+    $ref: 'user.yaml'

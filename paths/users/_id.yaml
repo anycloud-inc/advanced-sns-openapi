@@ -1,0 +1,14 @@
+parameters:
+  - schema:
+      type: number
+    name: id
+    in: path
+    required: true
+get:
+  security:
+    - Bearer: []
+  tags: [user]
+  responses:
+    '200':
+      $ref: '../../openapi.yaml#/components/responses/ResponseUser'
+  operationId: findUser

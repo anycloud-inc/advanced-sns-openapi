@@ -1,0 +1,16 @@
+type: object
+title: EntityMessageReaction
+description: ''
+properties:
+  id:
+    type: integer
+  content:
+    type: string
+  userId:
+    type: integer
+  messageId:
+    type: integer
+required:
+  - id
+  - content
+  - messageId

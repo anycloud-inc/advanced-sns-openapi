@@ -1,0 +1,9 @@
+# /friends
+get:
+  security:
+    - Bearer: []
+  tags: [friend]
+  operationId: listFriends
+  responses:
+    '200':
+      $ref: '../../openapi.yaml#/components/responses/ResponseFriendList'

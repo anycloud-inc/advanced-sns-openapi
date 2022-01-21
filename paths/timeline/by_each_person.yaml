@@ -1,0 +1,9 @@
+# /timeline/by_each_person
+get:
+  security:
+    - Bearer: []
+  tags: [timeline]
+  operationId: listTimelinesByEachPerson
+  responses:
+    '200':
+      $ref: '../../openapi.yaml#/components/responses/ResponseTimelineList'

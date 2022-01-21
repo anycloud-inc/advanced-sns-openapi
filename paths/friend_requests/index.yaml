@@ -1,0 +1,40 @@
+# /friend_requests
+post:
+  security:
+    - Bearer: []
+  tags: [friend_request]
+  operationId: createFriendRequest
+  requestBody:
+    content:
+      application/json:
+        schema:
+          title: RequestCreateFriendRequest
+          type: object
+          properties:
+            receiverId:
+              type: integer
+          required:
+            - receiverId
+  responses:
+    200:
+      $ref: '../../openapi.yaml#/components/responses/ResponseSuccess'
+
+delete:
+  security:
+    - Bearer: []
+  tags: [friend_request]
+  operationId: deleteFriendRequest
+  requestBody:
+    content:
+      application/json:
+        schema:
+          title: RequestDeleteFriendRequest
+          type: object
+          properties:
+            receiverId:
+              type: integer
+          required:
+            - receiverId
+  responses:
+    200:
+      $ref: '../../openapi.yaml#/components/responses/ResponseSuccess'

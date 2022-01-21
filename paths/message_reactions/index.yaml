@@ -1,0 +1,12 @@
+# /message_reactions
+post:
+  tags: [message_reaction]
+  operationId: createMessageReaction
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/schemas/request/create_message_reaction.yaml'
+  responses:
+    '200':
+      $ref: '../../openapi.yaml#/components/responses/ResponseMessageReaction'

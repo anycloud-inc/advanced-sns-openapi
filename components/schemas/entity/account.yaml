@@ -1,0 +1,36 @@
+type: object
+properties:
+  id:
+    type: integer
+    format: int32
+  name:
+    type: string
+  email:
+    type: string
+  iconImageUrl:
+    type: string
+  friendIds:
+    type: array
+    items:
+      type: integer
+      format: int32
+  sendingRequestUserIds:
+    description: 友達リクエストを送っているユーザーID
+    type: array
+    items:
+      type: integer
+      format: int32
+  receivingRequestUserIds:
+    description: 友達リクエストを受けているユーザーID
+    type: array
+    items:
+      type: integer
+      format: int32
+
+required:
+  - id
+  - name
+  - email
+  - friendIds
+  - sendingRequestUserIds
+  - receivingRequestUserIds

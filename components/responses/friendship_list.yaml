@@ -1,0 +1,13 @@
+description: OK
+content:
+  application/json:
+    schema:
+      title: ResponseFriendshipList
+      type: object
+      properties:
+        friendships:
+          type: array
+          items:
+            $ref: '../schemas/entity/friendship.yaml'
+      required:
+        - friendships
