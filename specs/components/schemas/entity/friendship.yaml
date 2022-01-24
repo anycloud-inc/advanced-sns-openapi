@@ -1,4 +1,5 @@
 type: object
+title: EntityFriendship
 properties:
   id:
     type: integer
