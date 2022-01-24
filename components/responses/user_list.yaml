@@ -5,9 +5,9 @@ content:
       type: object
       title: ResponseUser
       properties:
-        user:
+        users:
           type: array
           items:
             $ref: '../schemas/entity/user.yaml'
       required:
-        - user
+        - users
