@@ -214,9 +214,14 @@ export interface components {
     EnumFriendRequestStatus: "Requesting" | "Accepted" | "Declined";
     RequestPagination: {
       cursor?: number;
+      /** @default true */
       isNext?: boolean;
+      /** @default 50 */
       size?: number;
-      /** @enum {string} */
+      /**
+       * @default DESC
+       * @enum {string}
+       */
       order?: "ASC" | "DESC";
     };
   };
@@ -455,7 +460,7 @@ export interface operations {
     parameters: {
       query: {
         pagination?: components["schemas"]["RequestPagination"];
-        filter: {
+        filter?: {
           userId: number;
         };
       };
