@@ -16,7 +16,7 @@ get:
         title: RequestUserFilter
         type: object
         properties:
-          uuid:
+          name:
             type: string
 
   description: ''

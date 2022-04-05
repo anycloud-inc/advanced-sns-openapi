@@ -668,7 +668,7 @@ export interface operations {
       query: {
         pagination?: components["schemas"]["RequestPagination"];
         filter: {
-          uuid?: string;
+          name?: string;
         };
       };
     };
