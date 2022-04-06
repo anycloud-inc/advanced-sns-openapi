@@ -8,5 +8,9 @@ properties:
     properties:
       body:
         type: string
+      viewableUserIds:
+        type: array
+        items:
+          type: integer
     required:
       - body
