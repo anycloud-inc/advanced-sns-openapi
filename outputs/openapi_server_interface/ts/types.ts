@@ -478,6 +478,7 @@ export interface operations {
         "application/json": {
           post: {
             body: string;
+            viewableUserIds?: number[];
           };
         };
       };
